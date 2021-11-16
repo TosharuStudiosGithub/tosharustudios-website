@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="loginandsignupstyle.css">
+	<link rel="shortcut icon" type="image/png" href="tosharustudios.png">>
+	<title>Login And Signup</title>
+</head>
+<body>
+	<nav>
+		<p>Tosharu Studios</p>
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="creations.html">Creations</a>
+				<ul>
+					<li><a href="tsmp.html">TosharuSMP</a></li>
+					<li><a href="#">TosharuVids</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Deals</a></li>
+			<li><a href="#">About Tosharu Studios</a></li>
+			<li><a href="#">The Tosharu Language</a>
+				<ul>
+					<li><a href="#">Lessons</a></li>
+				</ul>
+			</li>
+			<li><a href="loginandsignup.html">Account (NOT WORKING)</a></li>
+		</ul>
+	</nav>
+</body>
+<body>
+	<div class="hero">
+		<div class="form-box">
+			<div class="button-box">
+				<div id="btn"></div>
+				<button type="button" class="toggle-btn" onclick="login()">Login</button>
+				<button type="button" class="toggle-btn" onclick="register()">Sign Up</button>
+			</div>
+			<form id="login" class="input-group">
+			<input type="text" class="input-field" placeholder="Username" required>
+			<input type="text" class="input-field" placeholder="Password" required>
+			<input type="checkbox" class="check-box"><span>Remember Password</span>
+			<button type="submit" class="submit-btn"><a href="index.html">Login</a></button>
+		</form>
+			<form id="register" class="input-group">
+			<input type="text" class="input-field" placeholder="Username" required>
+			<input type="text" class="input-field" placeholder="Password" required>
+			<button type="submit" class="submit-btn"><a href="index.html">Register</a></button>
+		</form>
+		</div>
+
+	</div>
+	<script>
+		var x = document.getElementById("login");
+		var y = document.getElementById("register");
+		var z = document.getElementById("btn");
+		function register() {
+			x.style.left = "-400px";
+			y.style.left = "50px";
+			z.style.left = "110px";
+		}
+		function login() {
+			x.style.left = "50px";
+			y.style.left = "450px";
+			z.style.left = "0px";
+		}
+	</script>
+</body>
+</html>
