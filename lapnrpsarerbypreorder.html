@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tosharu Studios</title>	
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="shortcut icon" type="image/png" href="tosharustudios.png">
+</head>
+<body>	
+<nav>
+	<p>Tosharu Studios</p>
+	<ul>
+		<li><a href="index">Home</a></li>
+		<li><a href="partners">Partners</a></li>
+		<li><a href="employees">Employees</a></li>	
+		<li><a href="employeesonly">Employees Only</a></li>
+		<li><a href="services">Services</a>
+			<ul>
+				<li><a href="#">Online Production</a></li>
+				<li><a href="#">Plans and Projects</a></li>
+			</ul>
+		</li>
+		<li><a href="https://tosharuhosting.tebex.io">Server</a></li>
+		<li><a href="#">Public Upcoming Plans</a>
+			<ul>
+				<li><a href="#">TosharuOS</a></li>
+				<li><a href="lapnrpsarerby">Plan Raspberry</a></li>
+				<li><a href="loginandsignup">login and sign-up</a></li>
+			</ul>
+		</li>
+</nav>
+<div id="smart-button-container">
+      <div style="text-align: center;">
+        <div id="paypal-button-container"></div>
+      </div>
+    </div>
+  <script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
+  <script>
+    function initPayPalButton() {
+      paypal.Buttons({
+        style: {
+          shape: 'rect',
+          color: 'gold',
+          layout: 'vertical',
+          label: 'paypal',
+          
+        },
+
+        createOrder: function(data, actions) {
+          return actions.order.create({
+            purchase_units: [{"amount":{"currency_code":"USD","value":1}}]
+          });
+        },
+
+        onApprove: function(data, actions) {
+          return actions.order.capture().then(function(orderData) {
+            
+            // Full available details
+            console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+
+            // Show a success message within this page, e.g.
+            const element = document.getElementById('paypal-button-container');
+            element.innerHTML = '';
+            element.innerHTML = '<h3>Thank you for your payment!</h3>';
+
+            // Or go to another URL:  actions.redirect('thank_you.html');
+            
+          });
+        },
+
+        onError: function(err) {
+          console.log(err);
+        }
+      }).render('#paypal-button-container');
+    }
+    initPayPalButton();
+  </script>
+</body>
+</html>
