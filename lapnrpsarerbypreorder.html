@@ -39,15 +39,15 @@
       paypal.Buttons({
         style: {
           shape: 'rect',
-          color: 'gold',
+          color: 'blue',
           layout: 'vertical',
-          label: 'paypal',
+          label: 'pay',
           
         },
 
         createOrder: function(data, actions) {
           return actions.order.create({
-            purchase_units: [{"amount":{"currency_code":"USD","value":1}}]
+            purchase_units: [{"amount":{"currency_code":"USD","value":323.2,"breakdown":{"item_total":{"currency_code":"USD","value":320},"shipping":{"currency_code":"USD","value":0},"tax_total":{"currency_code":"USD","value":3.2}}}}]
           });
         },
 
