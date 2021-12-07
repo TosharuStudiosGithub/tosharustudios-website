@@ -24,10 +24,10 @@
 			<ul>
 				<li><a href="#">TosharuOS</a></li>
 				<li><a href="lapnrpsarerby">Plan Raspberry</a></li>
-				<li><a href="loginandsignup">login and sign-up</a></li>
 			</ul>
 		</li>
 </nav>
+<h2>Price: 400$</h2>
 <div id="smart-button-container">
       <div style="text-align: center;">
         <div id="paypal-button-container"></div>
@@ -47,7 +47,7 @@
 
         createOrder: function(data, actions) {
           return actions.order.create({
-            purchase_units: [{"amount":{"currency_code":"USD","value":323.2,"breakdown":{"item_total":{"currency_code":"USD","value":320},"shipping":{"currency_code":"USD","value":0},"tax_total":{"currency_code":"USD","value":3.2}}}}]
+            purchase_units: [{"amount":{"currency_code":"USD","value":400.2,"breakdown":{"item_total":{"currency_code":"USD","value":320},"shipping":{"currency_code":"USD","value":0},"tax_total":{"currency_code":"USD","value":3.2}}}}]
           });
         },
 
