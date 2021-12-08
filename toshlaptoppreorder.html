@@ -11,6 +11,7 @@
 	<ul>
 		<li><a href="index">Home</a></li>
 		<li><a href="partners">Partners</a></li>
+		<li><a href="toshlaptop">Toshlaptop</a></li>
 		<li><a href="employees">Employees</a></li>	
 		<li><a href="employeesonly">Employees Only</a></li>
 		<li><a href="services">Services</a>
@@ -23,13 +24,13 @@
 		<li><a href="#">Public Upcoming Plans</a>
 			<ul>
 				<li><a href="#">TosharuOS</a></li>
-				<li><a href="lapnrpsarerby">Plan Raspberry</a></li>
+				<li><a href="toshlaptop">Toshlaptop</a></li>
 			</ul>
 		</li>
 </nav>
-<h2>Price: 400$</h2>
+<h2 style="text-align: right;">Price: 600$</h2>
 <div id="smart-button-container">
-      <div style="text-align: center;">
+      <div style="text-align: right;">
         <div id="paypal-button-container"></div>
       </div>
     </div>
@@ -47,8 +48,8 @@
 
         createOrder: function(data, actions) {
           return actions.order.create({
-            purchase_units: [{"amount":{"currency_code":"USD","value":400.2,"breakdown":{"item_total":{"currency_code":"USD","value":320},"shipping":{"currency_code":"USD","value":0},"tax_total":{"currency_code":"USD","value":3.2}}}}]
-          });
+            purchase_units: [{"amount":{"currency_code":"USD","value":600,"breakdown":{"item_total":{"currency_code":"USD","value":600},"shipping":{"currency_code":"USD","value":0},"tax_total":{"currency_code":"USD","value":6}}}}]
+          });6
         },
 
         onApprove: function(data, actions) {
