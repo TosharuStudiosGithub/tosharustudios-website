@@ -29,9 +29,9 @@
 		</li>
 </nav>
 <p style="color:white;">.</p>
-<h2 style="text-align: left;">Price: 600$</h2>
+<h2 style="text-align: left;">Price: 1,100$</h2>
 <div id="smart-button-container">
-      <div style="text-align: right;">
+      <div style="text-align: center;">
         <div id="paypal-button-container"></div>
       </div>
     </div>
@@ -41,16 +41,16 @@
       paypal.Buttons({
         style: {
           shape: 'rect',
-          color: 'blue',
+          color: 'gold',
           layout: 'vertical',
-          label: 'pay',
+          label: 'buynow',
           
         },
 
         createOrder: function(data, actions) {
           return actions.order.create({
-            purchase_units: [{"amount":{"currency_code":"USD","value":600,"breakdown":{"item_total":{"currency_code":"USD","value":600},"shipping":{"currency_code":"USD","value":0},"tax_total":{"currency_code":"USD","value":6}}}}]
-          });6
+            purchase_units: [{"amount":{"currency_code":"USD","value":1100,"breakdown":{"item_total":{"currency_code":"USD","value":1000},"shipping":{"currency_code":"USD","value":50},"tax_total":{"currency_code":"USD","value":50}}}}]
+          });
         },
 
         onApprove: function(data, actions) {
