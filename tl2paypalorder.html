@@ -38,6 +38,8 @@
 <h2 style="text-align: left;">Price: 900$</h2>
 <div id="smart-button-container">
       <div style="text-align: center;">
+<div id="smart-button-container">
+      <div style="text-align: center;">
         <div id="paypal-button-container"></div>
       </div>
     </div>
@@ -49,13 +51,13 @@
           shape: 'rect',
           color: 'gold',
           layout: 'vertical',
-          label: 'pay',
+          label: 'paypal',
           
         },
 
         createOrder: function(data, actions) {
           return actions.order.create({
-            purchase_units: [{"amount":{"currency_code":"USD","value":1000,"breakdown":{"item_total":{"currency_code":"USD","value":1100},"shipping":{"currency_code":"USD","value":50},"tax_total":{"currency_code":"USD","value":50}}}}]
+            purchase_units: [{"amount":{"currency_code":"USD","value":1100,"breakdown":{"item_total":{"currency_code":"USD","value":1000},"shipping":{"currency_code":"USD","value":100},"tax_total":{"currency_code":"USD","value":0}}}}]
           });
         },
 
