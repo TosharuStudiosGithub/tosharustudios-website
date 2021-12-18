@@ -33,7 +33,7 @@
     </li>
 </nav>
 <p style="color:white;">.</p>
-<h2 style="text-align: left;">Price: $1100</h2>
+<h2 style="text-align: left;">Price: $1500</h2>
 <div id="smart-button-container">
       <div style="text-align: center;">
 <div id="smart-button-container">
@@ -55,7 +55,7 @@
 
         createOrder: function(data, actions) {
           return actions.order.create({
-            purchase_units: [{"amount":{"currency_code":"USD","value":1100,"breakdown":{"item_total":{"currency_code":"USD","value":1000},"shipping":{"currency_code":"USD","value":100},"tax_total":{"currency_code":"USD","value":0}}}}]
+            purchase_units: [{"amount":{"currency_code":"USD","value":1500,"breakdown":{"item_total":{"currency_code":"USD","value":1100},"shipping":{"currency_code":"USD","value":400},"tax_total":{"currency_code":"USD","value":0}}}}]
           });
         },
 
